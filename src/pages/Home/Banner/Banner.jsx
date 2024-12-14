@@ -24,7 +24,7 @@ const Banner = () => {
             >
                 {images.map((img, index) => (
                     <div key={index}>
-                        <img src={img} alt={`Slide ${index + 1}`} />
+                        <img  src={img} alt={`Slide ${index + 1}`} />
                     </div>
                 ))}
             </Carousel>
