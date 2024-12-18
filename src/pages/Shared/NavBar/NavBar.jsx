@@ -15,9 +15,9 @@ const NavBar = () => {
         </li>
         <li><a>Item 3</a></li>
     </>
-
+// max-w-screen-xl mx-auto
     return (
-        <div className="navbar fixed z-10 bg-opacity-50 bg-black max-w-screen-xl mx-auto text-white">
+        <div className="navbar fixed z-10 bg-opacity-50 bg-black text-white">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
