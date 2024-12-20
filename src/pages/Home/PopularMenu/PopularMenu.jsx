@@ -30,6 +30,7 @@ const PopularMenu = () => {
                     ></MenuItem>)
                 }
             </div>
+            <button className="btn btn-outline border-0 border-b-[3px] border-black text-black">Read More</button>
         </section>
     );
 };

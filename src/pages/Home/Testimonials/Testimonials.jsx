@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import SectionTitle from '../../../components/SectionTitle/SectionTitle';
 
-import { Rating } from '@smastrom/react-rating'
+import { Rating, Star } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 
 const Testimonials = () => {
@@ -18,6 +18,12 @@ const Testimonials = () => {
             .then(data => setReview(data))
     }, [])
 
+    const myStyles = {
+        itemShapes: Star,
+        activeFillColor: '#ffb700',
+        inactiveFillColor: '#fbf1a9'
+    }
+
     return (
         <section className='max-w-screen-xl mx-auto pb-32'>
             <SectionTitle
@@ -28,10 +34,11 @@ const Testimonials = () => {
 
                 {
                     reviews.map(review => <SwiperSlide>
-                        <div className='mx-20 flex flex-col items-center gap-5'>
+                        <div className='mx-40 flex flex-col items-center gap-5'>
                             <Rating
                                 style={{ maxWidth: 180 }}
                                 value={review.rating}
+                                itemStyles={myStyles}
                                 readOnly
                             />
                             <h2 className='text-[#444444] text-xl pb-2 pt-10'>{review.details}</h2>
