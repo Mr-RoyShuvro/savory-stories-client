@@ -1,5 +1,5 @@
 import React from 'react';
-import { Parallax, Background } from 'react-parallax';
+import { Parallax } from 'react-parallax';
 
 const Cover = ({ img, title, subTitle }) => {
     return (
@@ -7,7 +7,7 @@ const Cover = ({ img, title, subTitle }) => {
             blur={{ min: -15, max: 15 }}
             bgImage={img}
             bgImageAlt="the dog"
-            strength={-300}
+            strength={-200}
         >
             <div
                 className="hero h-[600px]"
