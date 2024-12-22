@@ -3,6 +3,8 @@ import Cover from '../../Shared/Cover/Cover';
 import orderImg from '../../../assets/shop/banner2.jpg'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import useMenu from '../../../hooks/useMenu';
+import OrderCardCategory from '../OrderCardCategory/OrderCardCategory';
 
 
 const Order = () => {
@@ -14,26 +16,40 @@ const Order = () => {
     const soup = menu.filter(item => item.category === 'soup');
     const salad = menu.filter(item => item.category === 'salad');
     const pizza = menu.filter(item => item.category === 'pizza');
-    const offered = menu.filter(item => item.category === 'offered');
+    const drinks = menu.filter(item => item.category === 'drinks');
 
     return (
         <div>
             <Cover img={orderImg} title="Order Food" subTitle="Would you like to try a dish?"></Cover>
 
-            <Tabs defaultIndex={tabindex} onSelect={(index) => setTabIndex(index)}>
-                <TabList>
-                    <Tab>Salad</Tab>
-                    <Tab>Pizza</Tab>
-                    <Tab>Soups</Tab>
-                    <Tab>Desserts</Tab>
-                    <Tab>Drinks</Tab>
-                </TabList>
-                <TabPanel></TabPanel>
-                <TabPanel></TabPanel>
-                <TabPanel></TabPanel>
-                <TabPanel></TabPanel>
-                <TabPanel></TabPanel>
-            </Tabs>
+            <div className='max-w-screen-xl mx-auto flex flex-col justify-center items-center'>
+                <Tabs defaultIndex={tabindex} onSelect={(index) => setTabIndex(index)}>
+                    <div className='flex flex-col justify-center items-center text-red-500 text-lg font-medium'>
+                        <TabList>
+                            <Tab>Salad</Tab>
+                            <Tab>Pizza</Tab>
+                            <Tab>Soups</Tab>
+                            <Tab>Desserts</Tab>
+                            <Tab>Drinks</Tab>
+                        </TabList>
+                    </div>
+                    <TabPanel>
+                        <OrderCardCategory items={salad}></OrderCardCategory>
+                    </TabPanel>
+                    <TabPanel>
+                        <OrderCardCategory items={pizza}></OrderCardCategory>
+                    </TabPanel>
+                    <TabPanel>
+                        <OrderCardCategory items={soup}></OrderCardCategory>
+                    </TabPanel>
+                    <TabPanel>
+                        <OrderCardCategory items={dessert}></OrderCardCategory>
+                    </TabPanel>
+                    <TabPanel>
+                        <OrderCardCategory items={drinks}></OrderCardCategory>
+                    </TabPanel>
+                </Tabs>
+            </div>
         </div>
     );
 };
