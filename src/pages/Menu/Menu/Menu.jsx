@@ -2,9 +2,24 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Cover from '../../Shared/Cover/Cover';
 import MenuImg from '../../../assets/menu/banner3.jpg'
-import PopularMenu from '../../Home/PopularMenu/PopularMenu';
+import useMenu from '../../../hooks/useMenu';
+import SectionTitle from '../../../components/SectionTitle/SectionTitle';
+import MenuCategory from '../MenuCategory/MenuCategory';
+
+import dessertsImg from '../../../assets/menu/dessert-bg.jpeg'
+import pizzaImg from '../../../assets/menu/pizza-bg.jpg'
+import saladsImg from '../../../assets/menu/salad-bg.jpg'
+
 
 const Menu = () => {
+
+    const [menu] = useMenu();
+    const dessert = menu.filter(item => item.category === 'dessert');
+    const soup = menu.filter(item => item.category === 'soup');
+    const salad = menu.filter(item => item.category === 'salad');
+    const pizza = menu.filter(item => item.category === 'pizza');
+    const offered = menu.filter(item => item.category === 'offered');
+
     return (
         <div>
             <Helmet>
@@ -15,19 +30,18 @@ const Menu = () => {
                 title={"OUR MENU"}
                 subTitle={"Would you like to try a dish?"}
             ></Cover>
-            <PopularMenu></PopularMenu>
-            <Cover
-                img={MenuImg}
-                title={"OUR MENU"}
-                subTitle={"Would you like to try a dish?"}
-            ></Cover>
-            <PopularMenu></PopularMenu>
-            <Cover
-                img={MenuImg}
-                title={"OUR MENU"}
-                subTitle={"Would you like to try a dish?"}
-            ></Cover>
-            <PopularMenu></PopularMenu>
+            <SectionTitle
+                subHeading="Don't miss"
+                heading="TODAY'S OFFER">
+            </SectionTitle>
+            {/* Offered item */}
+            <MenuCategory items={offered}></MenuCategory>
+
+            {/* Desserts */}
+            <MenuCategory items={dessert} coverImg={dessertsImg} title={"Desserts"} subTitle={"Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."}></MenuCategory>
+
+            {/* Pizza */}
+            <MenuCategory items={pizza} coverImg={pizzaImg} title={"Pizza"} subTitle={"Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."}></MenuCategory>
         </div>
     );
 };
