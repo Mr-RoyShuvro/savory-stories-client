@@ -19,7 +19,7 @@ const MenuCategory = ({ items, coverImg, title, subTitle }) => {
                     ></MenuItem>)
                 }
             </div>
-            <Link to="/order">
+            <Link to={`/order/${title}`}>
                 <BtnPrimary btnPrimaryText="ORDER YOUR FAVOURITE FOOD"></BtnPrimary>
             </Link>
         </div>
