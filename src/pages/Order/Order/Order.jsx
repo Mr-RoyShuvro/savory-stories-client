@@ -24,7 +24,7 @@ const Order = () => {
 
             <div className='max-w-screen-xl mx-auto flex flex-col justify-center items-center pt-20 pb-20'>
                 <Tabs defaultIndex={tabindex} onSelect={(index) => setTabIndex(index)}>
-                    <div className='flex flex-col justify-center items-center text-[#BB8506] text-2xl font-medium pb-10'>
+                    <div className='flex flex-col justify-center items-center text-[#BB8506] text-2xl font-semibold pb-10'>
                         <TabList>
                             <Tab>Salad</Tab>
                             <Tab>Pizza</Tab>
