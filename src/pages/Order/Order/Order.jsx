@@ -22,9 +22,9 @@ const Order = () => {
         <div>
             <Cover img={orderImg} title="Order Food" subTitle="Would you like to try a dish?"></Cover>
 
-            <div className='max-w-screen-xl mx-auto flex flex-col justify-center items-center'>
+            <div className='max-w-screen-xl mx-auto flex flex-col justify-center items-center pt-20 pb-20'>
                 <Tabs defaultIndex={tabindex} onSelect={(index) => setTabIndex(index)}>
-                    <div className='flex flex-col justify-center items-center text-red-500 text-lg font-medium'>
+                    <div className='flex flex-col justify-center items-center text-[#BB8506] text-2xl font-medium pb-10'>
                         <TabList>
                             <Tab>Salad</Tab>
                             <Tab>Pizza</Tab>
