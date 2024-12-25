@@ -34,7 +34,7 @@ const Order = () => {
             </Helmet>
             <Cover img={orderImg} title="Order Food" subTitle="Would you like to try a dish?"></Cover>
 
-            <div className='max-w-screen-xl mx-auto flex flex-col justify-center items-center pt-20 pb-20'>
+            <div className='max-w-screen-xl mx-auto pt-20 pb-20'>
                 <Tabs defaultIndex={tabindex} onSelect={(index) => setTabIndex(index)}>
                     <div className='flex flex-col justify-center items-center text-[#BB8506] text-2xl font-semibold pb-10'>
                         <TabList>

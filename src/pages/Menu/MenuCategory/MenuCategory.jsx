@@ -11,7 +11,7 @@ const MenuCategory = ({ items, coverImg, title, subTitle }) => {
             {title && <Cover img={coverImg} title={title} subTitle={subTitle} ></Cover>}
 
             {/* Category */}
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6 max-w-screen-xl mx-auto mt-32 mb-6'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-10 max-w-screen-xl mx-auto mt-32 mb-6'>
                 {
                     items.map(item => <MenuItem
                         key={item._id}
