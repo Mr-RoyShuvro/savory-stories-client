@@ -11,7 +11,7 @@ const MenuItem = ({ item }) => {
                 <h3 className='uppercase text-[#151515] text-xl font-normal pb-2'>{name}-----------------</h3>
                 <p className='text-[#737373] text-base font-normal leading-[26px]'>{recipe}</p>
             </div>
-            <h3 className='text-[#BB8506] text-xl font-normal leading-[26px]'>${price}</h3>
+            <h3 className='text-[#BB8506] text-xl font-bold leading-[26px]'>${price}</h3>
         </div>
     );
 };
