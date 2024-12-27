@@ -44,20 +44,18 @@ const Login = () => {
                 <div className="card bg-white max-w-lg shrink-0 shadow-2xl w-1/2">
                     <h1 className="text-5xl font-bold">Login now!</h1>
                     <form onSubmit={handleLogin} className="card-body">
-                        <div className="form-control">
+                        <div className="form-control pb-6">
                             <label className="label">
-                                <span className="label-text">Email</span>
+                                <span className="label-text text-[#444444] text-xl font-semibold pb-4">Email</span>
                             </label>
-                            <input type="email" name='email' placeholder="email" className="input input-bordered bg-white" required />
+                            <input type="email" name='email' placeholder="Enter your email" className="input input-bordered bg-white text-[#A1A1A1] text-base font-normal" required />
                         </div>
-                        <div className="form-control">
+                        <div className="form-control pb-10">
                             <label className="label">
-                                <span className="label-text">Password</span>
+                                <span className="label-text text-[#444444] text-xl font-semibold pb-4">Password</span>
                             </label>
-                            <input type="password" name='password' placeholder="password" className="input input-bordered bg-white" required />
-                            <label className="label">
-                                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                            </label>
+                            <input type="password" name='password' placeholder="Enter your password" className="input input-bordered bg-white text-[#A1A1A1] text-base font-normal" required />
+                            
                         </div>
 
 
@@ -65,16 +63,15 @@ const Login = () => {
                             <label className="label">
                                 <LoadCanvasTemplate />
                             </label>
-                            <div className='flex gap-5 justify-center items-center'>
-                                <input type="text" ref={captchaRef} name='captcha' placeholder="Type here" className="input input-bordered bg-white" required />
+                            <div className='flex gap-10 items-center justify-between pt-6'>
+                                <input type="text" ref={captchaRef} name='captcha' placeholder="Type here" className="input input-bordered bg-white w-full" required />
                                 {/* <button type='button'  className='btn btn-outline btn-sm' >Validate</button> */}
                                 <input className='checkbox checkbox-lg checkbox-warning border-4' type="checkbox" onClick={handleValidateCaptcha} name="" id="" />
                             </div>
                         </div>
 
-
-                        <div className="form-control mt-6">
-                            <button disabled={disabled} className="btn btn-primary text-white text-xl font-bold bg-[#D1A054] rounded-lg border-none">Login</button>
+                        <div className="form-control mt-10">
+                            <button disabled={disabled} className="btn btn-primary text-white text-xl font-bold bg-[#D1A054] hover:bg-[#c28f44] rounded-lg border-none">Sign In</button>
                         </div>
                     </form>
                 </div>
