@@ -48,14 +48,14 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text text-[#444444] text-xl font-semibold pb-4">Email</span>
                             </label>
-                            <input type="email" name='email' placeholder="Enter your email" className="input input-bordered bg-white text-[#A1A1A1] text-base font-normal" required />
+                            <input type="email" name='email' placeholder="Enter your email" className="input input-bordered border-[#D1A054] bg-white text-[#A1A1A1] text-base font-normal" required />
                         </div>
                         <div className="form-control pb-10">
                             <label className="label">
                                 <span className="label-text text-[#444444] text-xl font-semibold pb-4">Password</span>
                             </label>
-                            <input type="password" name='password' placeholder="Enter your password" className="input input-bordered bg-white text-[#A1A1A1] text-base font-normal" required />
-                            
+                            <input type="password" name='password' placeholder="Enter your password" className="input input-bordered border-[#D1A054] bg-white text-[#A1A1A1] text-base font-normal" required />
+
                         </div>
 
 
@@ -64,7 +64,7 @@ const Login = () => {
                                 <LoadCanvasTemplate />
                             </label>
                             <div className='flex gap-10 items-center justify-between pt-6'>
-                                <input type="text" ref={captchaRef} name='captcha' placeholder="Type here" className="input input-bordered bg-white w-full" required />
+                                <input type="text" ref={captchaRef} name='captcha' placeholder="Type here" className="input input-bordered border-[#D1A054] bg-white w-full" required />
                                 {/* <button type='button'  className='btn btn-outline btn-sm' >Validate</button> */}
                                 <input className='checkbox checkbox-lg checkbox-warning border-4' type="checkbox" onClick={handleValidateCaptcha} name="" id="" />
                             </div>
