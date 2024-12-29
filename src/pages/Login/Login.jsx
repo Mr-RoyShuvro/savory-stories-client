@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 import loginImg from '../../assets/others/authentication2.png'
 import { AuthContext } from '../../providers/AuthProvider';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
 
@@ -83,6 +84,7 @@ const Login = () => {
                             <button disabled={disabled} className="btn btn-primary text-white text-xl font-bold bg-[#D1A054] hover:bg-[#c28f44] rounded-lg border-none">Sign In</button>
                         </div>
                     </form>
+                    <p className='text-[#D1A054] text-xl font-medium text-center'>New here? <Link to="/signup" className='font-bold'>Create a New Account</Link></p>
                 </div>
             </div>
         </div>
