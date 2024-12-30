@@ -28,7 +28,7 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text text-[#444444] text-xl font-semibold pb-4">Name</span>
                             </label>
-                            <input type="text" {...register("name", { required: true })} name='name' placeholder="Enter your name" className="input input-bordered border-[#D1A054] bg-white text-[#A1A1A1] text-base font-normal"  />
+                            <input type="text" {...register("name", { required: true })} name='name' placeholder="Enter your name" className="input input-bordered border-[#D1A054] bg-white text-[#A1A1A1] text-base font-normal" />
                             {errors.name && <span className='text-red-600 font-semibold'>Name is required</span>}
                         </div>
 
@@ -44,10 +44,10 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text text-[#444444] text-xl font-semibold pb-4">Password</span>
                             </label>
-                            <input type="password" {...register("password", { required: true, minLength: 6, maxLength: 20})} name='password' placeholder="Enter your password" className="input input-bordered border-[#D1A054] bg-white text-[#A1A1A1] text-base font-normal" />
-                            {errors.password && <span className='text-red-600 font-semibold'>Password is't valid</span>}
+                            <input type="password" {...register("password", { required: true, minLength: 6, maxLength: 20 })} name='password' placeholder="Enter your password" className="input input-bordered border-[#D1A054] bg-white text-[#A1A1A1] text-base font-normal" />
+                            {errors.password?.type === "required" && (<p className='text-red-600 font-semibold'>Password is required</p>)}
+                            {errors.password?.type === "minLength" && (<p className='text-red-600 font-semibold'>Password is not valid</p>)}
                         </div>
-
 
                         <div className="form-control mt-10">
                             <button className="btn btn-primary text-white text-xl font-bold bg-[#D1A054] hover:bg-[#c28f44] rounded-lg border-none">Sign Up</button>
